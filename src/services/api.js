@@ -16,7 +16,7 @@ export const fetchCafes = async (lat = DEFAULT_LAT, lon = DEFAULT_LON) => {
       out center;
     `;
 
-        const response = await fetch('https://overpass-api.de/api/interpreter', {
+        const response = await fetch('/api/overpass', {
             method: 'POST',
             body: query,
         });
@@ -71,7 +71,7 @@ export const fetchCafeById = async (id) => {
             );
             out center;
         `;
-        const response = await fetch('https://overpass-api.de/api/interpreter', {
+        const response = await fetch('/api/overpass', {
             method: 'POST',
             body: query,
         });
